@@ -66,7 +66,7 @@ export class WizardComponent implements OnInit, AfterContentInit {
     return this.steps.find(step => step.isActive);
   }
 
-  private set activeStep(step: WizardStepComponent) {
+  set activeStep(step: WizardStepComponent) {
     if (step !== this.activeStep && !step.isDisabled) {
       this.activeStep.isActive = false;
       step.isActive = true;
